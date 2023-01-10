@@ -5,6 +5,7 @@ import App from './App'
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 import { Tree } from './pages'
 import GlobalStyle from './GlobalStyle'
+import { FloatMenu } from './components/FloatMenu'
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/trees/:treeId',
-    element: <Tree />,
+    element: (
+      <>
+        <Tree />
+      </>
+    ),
   },
 ])
 
